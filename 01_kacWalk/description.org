@@ -1,0 +1,14 @@
+** 🔢 Simulations and Visuals to Include
+
+*** 1. 2D Kac Walk Trajectories
+
+> *Figure 1 in the paper*
+
+- Simulate paths of the Kac process in 2D with various \((a, c)\) parameters.
+- Plot trajectories for increasing damping/velocity pairs:
+  \((a, c) = (1, 1), (2, 1), (4, 2), (25, 5)\), and compare to Brownian motion.
+
+Purpose:
+☑️ Shows that Kac paths remain structured (not “blurry”)
+☑️ Highlights *finite speed*, unlike Brownian motion
+
