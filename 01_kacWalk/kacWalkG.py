@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -59,7 +60,11 @@ axs[1].legend()
 plt.suptitle("Kac Walk vs Brownian Motion", fontsize=22)
 plt.tight_layout()
 plt.subplots_adjust(top=0.88)
-plt.savefig("kac_vs_bm.pdf", bbox_inches='tight')
-plt.savefig("kac_vs_bm_zoom.png", bbox_inches='tight', dpi=220)
+output_dir = "../graphics"
+
+plt.savefig(os.path.join(output_dir, "kac_vs_bm.pdf"), bbox_inches='tight')
+plt.savefig(os.path.join(output_dir, "kac_vs_bm_zoom.png"), bbox_inches='tight', dpi=220)
+
+
 plt.show()
 

@@ -1,1 +1,2 @@
-This repo is my work to visualize and understand Telegrapher’s Generative Model via Kac Flows.pdf.
+This repo is my work to visualize and understand Telegrapher’s
+Generative Model via Kac Flows.pdf.
