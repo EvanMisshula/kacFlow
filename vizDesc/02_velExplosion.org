@@ -1,0 +1,89 @@
+*** Speaker Notes: Velocity Norm Explosion vs. Bounded Flow
+:PROPERTIES:
+:BEAMER_ENV: note
+:END:
+
+This section helps learners understand why Kac flows offer a more stable alternative to traditional diffusion models by comparing their velocity field behavior.
+
+We are visualizing not the motion of individual data points, but the flow of probability mass—how a distribution \(\mu_t(x)\) evolves over time.
+
+This evolution is governed by the continuity equation:
+
+\[
+\partial_t \mu_t(x) + \nabla \cdot (v_t(x)\, \mu_t(x)) = 0
+\]
+
+The velocity field \(v_t(x)\) describes how probability mass moves at each point in space and time.
+
+
+*** Plot 1: Exploding Diffusion Norm vs. Bounded Kac Norm
+:PROPERTIES:
+:BEAMER_ENV: note
+:END:
+
+Refer to Equation (7) in the paper for the diffusion case:
+
+\[
+\|v_t\|^2_{L^2(p_t)} = \mathbb{E}\left[\|\nabla \log p_t(X_t)\|^2\right]
+\]
+
+This shows that the score function norm becomes large as \(t \to 1\), especially near sharp data modes. In practice, this leads to exploding gradients and training instability.
+
+Compare that with Equation (8) for the Kac model:
+
+\[
+\|v_t\|^2_{L^2(p_t)} \leq d c^2
+\]
+
+This is a hard upper bound, and it's independent of how close we are
+to the data distribution. This stability is a major advantage of Kac
+flows.
+
+In the visualization (`02_1_velFieldNorm.pdf`), we see:
+
+- Red curve: diffusion norm exploding like \(1/(1 - t)\)
+- Blue line: Kac norm flat and bounded
+
+Key point: bounded velocity means stable training and numerical robustness.
+
+
+
+*** Plot 2: Velocity Field Structure Over Time
+:PROPERTIES:
+:BEAMER_ENV: note
+:END:
+
+In `02_2_velField.pdf`, we visualize the actual velocity fields \(v_t(x)\) for both models at three time points \(t = 0.1, 0.5, 0.9\).
+
+For diffusion:
+
+\[
+v_t(x) \approx -\frac{x}{1 - t}
+\]
+
+As \(t \to 1\), the slope becomes extremely steep and erratic.
+
+For Kac:
+
+\[
+v_t(x) = -a x
+\]
+
+This is linear and constant over time—a stable mean-reverting force.
+
+The takeaway here is that Kac velocity fields are simple, interpretable, and consistent. They are well-suited for neural ODE solvers and avoid the stiffness and instability found in score-based diffusion.
+
+
+*** Summary for Learners
+:PROPERTIES:
+:BEAMER_ENV: note
+:END:
+
+- What flows is probability mass—not data points.
+- Diffusion models develop unbounded velocity near data, leading to
+  instability.
+- Kac flows maintain bounded, structured velocity fields.
+- This gives Kac models a strong engineering and physical advantage in
+  generative modeling.
+
+

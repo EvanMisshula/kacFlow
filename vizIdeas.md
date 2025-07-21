@@ -1,4 +1,7 @@
-Here are **helpful visualizations and simulations** you can present to give both **intuition** and even a **moral imperative** from *“Telegrapher’s Generative Model via Kac Flows”* by Duong et al. (2025):
+Here are **helpful visualizations and simulations** you can present to
+give both **intuition** and even a **moral imperative** from
+*“Telegrapher’s Generative Model via Kac Flows”* by Duong et
+al. (2025):
 
 ---
 
@@ -118,6 +121,3 @@ The conditional velocity field $v(t, x \mid x_0)$ from Corollary 15 (eq. 39).
 
 > “Kac Flows respect geometry, physics, and probability — all while improving generation.”
 
----
-
-Would you like Python code templates for simulating 2D Kac walks or generating Figure 5 from scratch?

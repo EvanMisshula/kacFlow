@@ -62,8 +62,8 @@ plt.tight_layout()
 plt.subplots_adjust(top=0.88)
 output_dir = "../graphics"
 
-plt.savefig(os.path.join(output_dir, "kac_vs_bm.pdf"), bbox_inches='tight')
-plt.savefig(os.path.join(output_dir, "kac_vs_bm_zoom.png"), bbox_inches='tight', dpi=220)
+plt.savefig(os.path.join(output_dir, "01_kac_vs_bm.pdf"), bbox_inches='tight')
+plt.savefig(os.path.join(output_dir, "01_kac_vs_bm_zoom.png"), bbox_inches='tight', dpi=220)
 
 
 plt.show()

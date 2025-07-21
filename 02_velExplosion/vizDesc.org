@@ -1,0 +1,22 @@
+
+*** 2. *Velocity Field Explosion in Diffusion vs. Bounded in Kac*
+
+> Refer to equations (7) and (8) in the paper.
+
+- Plot \(\|v_t\|^2_{L^2(p_t)}\) for score-based diffusion model and Kac.
+- Show that in diffusion:
+
+\[
+  \|v_t\|^2 \propto \frac{1}{1 - t} \quad \text{(explodes as } t \to 1)
+\]  
+* But for Kac:
+
+\[
+  \|v_t\|^2 \leq d c^2 \quad \text{(bounded)}
+\]
+
+*Purpose:*
+- Makes the engineering/moral case: bounded velocity = stable &
+  trainable
+- Underscores Einstein’s critique of diffusion: unphysical infinite
+  speed
